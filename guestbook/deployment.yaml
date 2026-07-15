@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gpg-test-nginx
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gpg-test-nginx
+  template:
+    metadata:
+      labels:
+        app: gpg-test-nginx
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:1.27
+          ports:
+            - containerPort: 80
