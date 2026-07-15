@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: gpg-test-nginx
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: gpg-test-nginx
